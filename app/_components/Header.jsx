@@ -20,18 +20,18 @@ const Header = () => {
           alt="logo"
           width={220}
           height={220}
-          quality={100}
+          quality={50}
+          priority="true"
         />
 
         <DropdownMenu>
-          <DropdownMenuTrigger className="outline-none">
-           
-            <h1 className="md:flex hidden gap-2 items-center  p-2 px-8 border rounded-full bg-slate-200 h-10">
+          <DropdownMenuTrigger className="outline-none" asChild>
+            <h1 className="md:flex hidden gap-2 items-center  p-2 px-8 border rounded-full bg-slate-200 h-10 cursor-pointer">
               <LayoutGrid className="h-5 w-5" /> Categories
             </h1>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-52">
-            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuLabel>Browse Category</DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem>Profile</DropdownMenuItem>
             <DropdownMenuItem>Billing</DropdownMenuItem>
@@ -40,7 +40,7 @@ const Header = () => {
           </DropdownMenuContent>
         </DropdownMenu>
 
-        <div className="md:flex border rounded-full p-2 gap-3 mx-12 px-5 hidden">
+        <div className="md:flex border rounded-full p-2 gap-3  px-5 hidden">
           <Search />
           <input
             type="text"
@@ -51,7 +51,6 @@ const Header = () => {
       </div>
       <div className="flex gap-5 items-center">
         <h2 className="flex p-2 items-center">
-          
           <ShoppingBag />0
         </h2>
         <Button>Login In</Button>

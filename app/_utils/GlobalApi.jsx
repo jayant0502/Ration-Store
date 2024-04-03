@@ -19,4 +19,4 @@ const getSliders = async () => {
 const getCategoryList = ()=> axiosClient.get("/categories?populate=*").then(res=>{return res.data.data})
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default { getCategory , getSliders , getCategoryList};
+export default { getCategory , getSliders , getCategoryList}; 
